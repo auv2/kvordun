@@ -17,3 +17,13 @@ Depends:
 LazyData: true
 URL: https://github.com/auv2/kvordun
 BugReports: https://github.com/auv2/kvordun/issues
+Imports: 
+    cli,
+    dplyr,
+    equate,
+    glue,
+    lifecycle,
+    magrittr,
+    rlang,
+    tidyr,
+    withr
