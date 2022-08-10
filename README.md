@@ -22,6 +22,8 @@ devtools::install_github("auv2/kvordun")
 
 Tekið úr Kolen og Brennan (2004) bls 40
 
+<img src="C:/Users/audun/AppData/Local/RStudio/tmp/paste-B3BA40C8.png" width="470"/>
+
 ``` r
 library(kvordun)
 value <- c(0,0,1,1,1,2,2,3,3,4)
