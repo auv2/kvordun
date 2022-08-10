@@ -20,7 +20,9 @@ devtools::install_github("auv2/kvordun")
 
 ## Dæmi
 
-Tekið úr Kolen og Brennan (2004) bls 40 ![](img/kolen_brennan_bls40.png)
+Tekið úr Kolen og Brennan (2004) bls 40
+
+![](img/kolen_brennan_bls40.png)
 
 ``` r
 library(kvordun)
