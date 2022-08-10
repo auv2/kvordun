@@ -2,7 +2,7 @@
 % Please edit documentation in R/reikna_hlutfall.R
 \name{reikna_hlutfall}
 \alias{reikna_hlutfall}
-\title{Title}
+\title{Reikna hlutfoll}
 \usage{
 reikna_hlutfall(value, kvardi = 0:10, punktar = 1)
 }
@@ -18,5 +18,5 @@ Skilar gagnaramma med tidni, hlutfalli, safntidni, maelitolum og
 lysingu
 }
 \description{
-Title
+Reikna hlutfoll
 }

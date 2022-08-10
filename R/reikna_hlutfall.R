@@ -1,13 +1,15 @@
 #' Kvordun
 #' Dæmi frá Kolen og Brennan (2004) bls 40
 #' value <- c(0,0,1,1,1,2,2,3,3,4)
+#'
+#' @param value
 
 z_score <- function(value) {
   z <- (value - mean(value, na.rm = T)) / sd(value, na.rm = T)
   return(z)
 }
 
-#' Title
+#' Reikna hlutfoll
 #'
 #' @param value
 #' @param kvardi  bil sem kvardinn er a t.d. 0:10
@@ -20,7 +22,7 @@ z_score <- function(value) {
 #'
 #' @import dplyr
 #' @import equate
-#' @importFrom fill, tidyr
+#' @importFrom tidyr fill
 #' @export
 #'
 #' @examples
