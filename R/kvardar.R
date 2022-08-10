@@ -1,6 +1,7 @@
 #' IQsubScale
 #'
 #' @param variable Nafn a breytu sem a ad setja a undirkvarda IQ
+#' @export
 IQsubScale  <- function(variable) {
   value <- NA
   value[variable <=	0.0025] <-	1

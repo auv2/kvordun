@@ -2,14 +2,10 @@
 % Please edit documentation in R/reikna_hlutfall.R
 \name{z_score}
 \alias{z_score}
-\title{Kvordun
-Dæmi frá Kolen og Brennan (2004) bls 40
-value <- c(0,0,1,1,1,2,2,3,3,4)}
+\title{Stadalstig}
 \usage{
 z_score(value)
 }
 \description{
-Kvordun
-Dæmi frá Kolen og Brennan (2004) bls 40
-value <- c(0,0,1,1,1,2,2,3,3,4)
+Stadalstig
 }

@@ -1,7 +1,4 @@
-#' Kvordun
-#' Dæmi frá Kolen og Brennan (2004) bls 40
-#' value <- c(0,0,1,1,1,2,2,3,3,4)
-#'
+#' Stadalstig
 #' @param value
 
 z_score <- function(value) {
@@ -26,15 +23,17 @@ z_score <- function(value) {
 #' @export
 #'
 #' @examples
-#'
+#' Daemi frá Kolen og Brennan (2004) bls 40
+#' value <- c(0,0,1,1,1,2,2,3,3,4)
+#' reikna_hlutfall(value)
 reikna_hlutfall <- function(value, kvardi = 0:10, punktar = 1) {
 
   value <- as.numeric(value)
 
-  ## Stilli upp stærð kvarða
+  ## Stilli upp staerð kvarða
 
   if (max(kvardi, na.rm = T) < max(value, na.rm = T)) {
-    ## Ef hæsta gildi er stærra en kvraði
+    ## Ef haesta gildi er staerra en kvraði
     freq_table <- equate::freqtab(value,
                                   min(kvardi, na.rm = T):max(value, na.rm = T))
   } else {
@@ -42,7 +41,7 @@ reikna_hlutfall <- function(value, kvardi = 0:10, punktar = 1) {
     freq_table <- equate::freqtab(value, kvardi)
   }
 
-  ## Nota loglinear smoothing til að draga úr staðbunidinni mælivillu
+  ## Nota loglinear smoothing til að draga úr staðbunidinni maelivillu
   #plot(freq_table)
   freq_table <- equate::presmoothing(freq_table, smoothmethod = "loglinear")
   #plot(freq_table)
@@ -54,7 +53,7 @@ reikna_hlutfall <- function(value, kvardi = 0:10, punktar = 1) {
   df$Freq <- round(df$Freq)
 
 
-  ## Fækka punktum
+  ## Faekka punktum
   fj.pnk <- data.frame(
     "value" = seq(from = min(kvardi),to = max(kvardi), by = punktar),
     "group" = seq(from = min(kvardi),to = max(kvardi), by = punktar))
