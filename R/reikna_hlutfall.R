@@ -26,7 +26,8 @@ z_score <- function(value) {
 #' Daemi frá Kolen og Brennan (2004) bls 40
 #' value <- c(0,0,1,1,1,2,2,3,3,4)
 #' reikna_hlutfall(value)
-reikna_hlutfall <- function(value, kvardi = 0:10, punktar = 1) {
+reikna_hlutfall <- function(value, kvardi = 0:10, punktar = 1,
+                            prenta_lysandi=TRUE) {
 
   value <- as.numeric(value)
 
@@ -45,7 +46,9 @@ reikna_hlutfall <- function(value, kvardi = 0:10, punktar = 1) {
   #plot(freq_table)
   freq_table <- equate::presmoothing(freq_table, smoothmethod = "loglinear")
   #plot(freq_table)
-  print(summary(freq_table), digits = 3)
+  if(prenta_lysandi) {
+    print(summary(freq_table), digits = 3)
+  }
 
 
   df <- as.data.frame(freq_table)
