@@ -20,10 +20,11 @@ devtools::install_github("auv2/kvordun")
 
 ## Dæmi
 
-Tekið úr Kolen og Brennan (2004) bls 40
-
 ![](img/kolen_brennan_bls40.png)
 
+“In this table, x refers to test score and f (x) to the proportion of examinees earning the score x. For example, the proportion of examinees earning a score of 0 is .20. F(x) is the cumulative proportion at or below x. For example, the proportion of examinees scoring 3 or below is .9. P(x) refers to the percentile rank, and for an integer score it equals the percentage of examinees below x plus 1/2 the percentage of examinees at x—i.e., for integer score x, P(x) = 100[F(x − 1) + f (x)/2].” (Kolen and Brennan, 2014, p. 38-39)
+
+Kolen, M. J., & Brennan, R. L. (2014). Test Equating, Scaling, and Linking. Springer New York. https://doi.org/10.1007/978-1-4939-0317-7
 ``` r
 library(kvordun)
 value <- c(0,0,1,1,1,2,2,3,3,4)
