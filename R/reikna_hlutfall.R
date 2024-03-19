@@ -25,7 +25,7 @@ z_score <- function(value) {
 #' @examples
 #' Daemi frá Kolen og Brennan (2004) bls 40
 #' value <- c(0,0,1,1,1,2,2,3,3,4)
-#' reikna_hlutfall(value)
+#' reikna_hlutfall(value, kvardi = 0:4)
 reikna_hlutfall <- function(value, kvardi = 0:10, punktar = 1,
                             prenta_lysandi=TRUE) {
 
@@ -61,7 +61,7 @@ reikna_hlutfall <- function(value, kvardi = 0:10, punktar = 1,
     "value" = seq(from = min(kvardi),to = max(kvardi), by = punktar),
     "group" = seq(from = min(kvardi),to = max(kvardi), by = punktar))
 
-  df <- left_join(df, fj.pnk) %>%
+  df <- left_join(df, fj.pnk, by = join_by(value)) %>%
     tidyr::fill(group) %>%
     group_by(group) %>%
     summarise(
