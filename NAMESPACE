@@ -3,6 +3,7 @@
 export("%>%")
 export(IQsubScale)
 export(reikna_hlutfall)
+export(relative_percentile)
 import(dplyr)
 import(equate)
 import(rlang)

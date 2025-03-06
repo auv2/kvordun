@@ -6,6 +6,25 @@ z_score <- function(value) {
   return(z)
 }
 
+#' Finn relative perecentile
+#'
+#' @param frequency tidni
+#'
+#' @returns relative perecentile
+#' @export
+#'
+#' @examples
+#' value <- c(0,0,1,1,1,2,2,3,3,4)
+#' frequency <- as.data.frame(table(value))$Freq
+relative_percentile <- function(frequency){
+  # Finna tíðni og uppsafnaða hluttíðni
+  cum_freq <- cumsum(frequency)
+  cum_p <- cumsum(frequency) / sum(frequency)
+  p_rank <- (cum_freq - (.5 * frequency)) / (sum(frequency)) * 100
+  return(p_rank)
+}
+
+
 #' Reikna hlutfoll
 #'
 #' @param value er vector sem inniheldur stigatolur a profi
