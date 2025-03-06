@@ -7,6 +7,8 @@
 reikna_hlutfall(value, kvardi = 0:10, punktar = 1, prenta_lysandi = TRUE)
 }
 \arguments{
+\item{value}{er vector sem inniheldur stigatolur a profi}
+
 \item{kvardi}{bil sem kvardinn er a t.d. 0:10}
 
 \item{punktar}{fjoldi punkkta a kvarda sem a ad taka saman, ef punktar = 1
@@ -21,7 +23,7 @@ lysingu
 Reikna hlutfoll
 }
 \examples{
-Daemi ur bok Kolen og Brennan (2004) bls 40
+# Daemi ur bok Kolen og Brennan (2004) bls 40
 value <- c(0,0,1,1,1,2,2,3,3,4)
 reikna_hlutfall(value, kvardi = 0:4)
 }
