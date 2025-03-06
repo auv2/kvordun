@@ -6,6 +6,9 @@
 \usage{
 z_score(value)
 }
+\arguments{
+\item{value}{er vector sem inniheldur stigatolur a profi}
+}
 \description{
 Stadalstig
 }

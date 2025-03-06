@@ -1,5 +1,5 @@
 #' Stadalstig
-#' @param value
+#' @param value er vector sem inniheldur stigatolur a profi
 
 z_score <- function(value) {
   z <- (value - mean(value, na.rm = T)) / sd(value, na.rm = T)
@@ -8,7 +8,7 @@ z_score <- function(value) {
 
 #' Reikna hlutfoll
 #'
-#' @param value
+#' @param value er vector sem inniheldur stigatolur a profi
 #' @param kvardi  bil sem kvardinn er a t.d. 0:10
 #' @param punktar fjoldi punkkta a kvarda sem a ad taka saman, ef punktar = 1
 #' tha er 1 punktur a moti punkti, ef punktar = 2 tha eru tveir punktar teknir
@@ -23,7 +23,7 @@ z_score <- function(value) {
 #' @export
 #'
 #' @examples
-#' Daemi ur bok Kolen og Brennan (2004) bls 40
+#' # Daemi ur bok Kolen og Brennan (2004) bls 40
 #' value <- c(0,0,1,1,1,2,2,3,3,4)
 #' reikna_hlutfall(value, kvardi = 0:4)
 reikna_hlutfall <- function(value, kvardi = 0:10, punktar = 1,
